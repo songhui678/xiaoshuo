@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>提交简历</title>
+    <script type="text/javascript" src="uploadfile.js"></script>
+</head>
+<body>
+<!-- <form action="upload.php" method="post" enctype="multipart/form-data"> -->
+        <div class="divTable-tr clearfix">
+    <button size="default" type="primary" bindtap="chooseImage">选择文件</button>
+    <view wx:for="{{imgPaths}}"  wx:if="{{imgPaths.length > 0}}" wx:for-item="item" wx:for-index="index" wx:key="1">
+        <image style="height: 200px; background-color: #eeeeee;" src="{{item}}"></image>
+    </view>
+
+    <button size="default" type="primary" bindtap="uploadImage" class="btn1cls">上传文件</button>
+            <div class="divTable-tdLeft">
+                <span class="divTable-tdLeft-span">选择简历文件</span>
+            </div>
+            <div class="divTable-tdRight">
+                <a href="javascript:;" class="divTable-tdRight-btn">选择简历文件</a>
+                <input type="file" name='file' multiple="true" accept="*/*">
+            </div>
+	    <!-- <input type="submit" name ="aa"> -->
+        </div>
+<!-- </form> -->
+</body>
+</html>
